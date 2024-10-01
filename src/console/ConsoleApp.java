@@ -7,6 +7,7 @@ import java.util.Scanner;
 
 public class ConsoleApp {
     private static Scanner scanner = new Scanner(System.in);
+    private static  ParkingService parkingService = new ParkingService();
     public static void start(){
         boolean isClose = false;
         while (!isClose){
@@ -15,70 +16,70 @@ public class ConsoleApp {
             switch (command[0].toLowerCase()){
                 case "create_parking_lot":
                     try{
-                        ParkingService.createParkingSlot(command[1]);
+                        parkingService.setParkingSlot(command[1]);
                     }catch (Exception e){
-                        System.out.println("Tolong lengkapi perintah anda, silahkan coba lagi");
+                        System.out.println("Tolong lengkapi perintah anda, silahkan coba lagi " + e.getMessage() );
                     }
                     break;
                 case "park":
                     try{
-                        ParkingService.createParkingSlot(command[1]);
+                        parkingService.addVehiclePark(command[1], command[2], command[3]);
                     }catch (Exception e){
-                        System.out.println("Tolong lengkapi perintah anda, silahkan coba lagi");
+                        System.out.println("Tolong lengkapi perintah anda, silahkan coba lagi" + e.getMessage());
                     }
                     break;
                 case "leave":
                     try{
-                        ParkingService.createParkingSlot(command[1]);
+                        parkingService.setParkingSlot(command[1]);
                     }catch (Exception e){
                         System.out.println("Tolong lengkapi perintah anda, silahkan coba lagi");
                     }
                     break;
                 case "status":
                     try{
-                        ParkingService.createParkingSlot(command[1]);
+                        parkingService.setParkingSlot(command[1]);
                     }catch (Exception e){
                         System.out.println("Tolong lengkapi perintah anda, silahkan coba lagi");
                     }
                     break;
                 case "type_of_vehicles":
                     try{
-                        ParkingService.createParkingSlot(command[1]);
+                        parkingService.setParkingSlot(command[1]);
                     }catch (Exception e){
                         System.out.println("Tolong lengkapi perintah anda, silahkan coba lagi");
                     }
                     break;
                 case "registration_numbers_for_vehicles_with_ood_plate":
                     try{
-                        ParkingService.createParkingSlot(command[1]);
+                        parkingService.setParkingSlot(command[1]);
                     }catch (Exception e){
                         System.out.println("Tolong lengkapi perintah anda, silahkan coba lagi");
                     }
                     break;
                 case "registration_numbers_for_vehicles_with_event_plate":
                     try{
-                        ParkingService.createParkingSlot(command[1]);
+                        parkingService.setParkingSlot(command[1]);
                     }catch (Exception e){
                         System.out.println("Tolong lengkapi perintah anda, silahkan coba lagi");
                     }
                     break;
                 case "registration_numbers_for_vehicles_with_color":
                     try{
-                        ParkingService.createParkingSlot(command[1]);
+                        parkingService.setParkingSlot(command[1]);
                     }catch (Exception e){
                         System.out.println("Tolong lengkapi perintah anda, silahkan coba lagi");
                     }
                     break;
                 case "slot_numbers_for_vehicles_with_colour":
                     try{
-                        ParkingService.createParkingSlot(command[1]);
+                        parkingService.setParkingSlot(command[1]);
                     }catch (Exception e){
                         System.out.println("Tolong lengkapi perintah anda, silahkan coba lagi");
                     }
                     break;
                 case "slot_number_for_registration_number":
                     try{
-                        ParkingService.createParkingSlot(command[1]);
+                        parkingService.setParkingSlot(command[1]);
                     }catch (Exception e){
                         System.out.println("Tolong lengkapi perintah anda, silahkan coba lagi");
                     }

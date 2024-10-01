@@ -1,7 +1,7 @@
 package object;
 
 public class Car extends Vehicle {
-    public Car(String numberPlate, String color) {
-        super(numberPlate, color, "Mobil");
+    public Car(String numberPlate, String color, int inSlot) {
+        super(numberPlate, color, "Mobil",inSlot);
     }
 }
