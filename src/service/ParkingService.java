@@ -66,48 +66,61 @@ public class ParkingService {
         System.out.println(count);
     }
     public void registrationNumbersForVehiclesWithOODPlate(){
+        String result = "";
         for (int i = 0; i < vehicles.size(); i++) {
             Vehicle vehicle = vehicles.get(i);
             if (Integer.parseInt(vehicle.getNumberPlate().split("-")[1]) % 2 == 1){
-                System.out.print(vehicle.getNumberPlate() + ",");
+                result += vehicle.getNumberPlate() + ",";
             }
         }
+        result = result.substring(0, result.length() - 1);
+        System.out.println(result);
+        System.out.println();
     }
 
     public void registrationNumbersForVehiclesWithEventPlate(){
+        String result = "";
         for (int i = 0; i < vehicles.size(); i++) {
             Vehicle vehicle = vehicles.get(i);
             if (Integer.parseInt(vehicle.getNumberPlate().split("-")[1]) % 2 == 0){
-                System.out.print(vehicle.getNumberPlate() + ",");
+                result += vehicle.getNumberPlate() + ",";
             }
         }
+        result = result.substring(0, result.length() - 1);
+        System.out.println(result);
+        System.out.println();
     }
 
     public void registrationNumbersForVehiclesWithColour(String colour){
+        String result = "";
         for (int i = 0; i < vehicles.size(); i++) {
             Vehicle vehicle = vehicles.get(i);
-            if (vehicle.getNumberPlate().equalsIgnoreCase(colour)){
-                System.out.print(vehicle.getNumberPlate() + ",");
+            if (vehicle.getColor().equalsIgnoreCase(colour)){
+                result += vehicle.getNumberPlate() + ",";
             }
         }
+        result = result.substring(0, result.length() - 1);
+        System.out.println(result);
     }
 
-    public void slotNumbersForVehiclesWithColour(String colour){
+    public void slotNumbersForVehicles(String filter, String with){
+        String result = "";
         for (int i = 0; i < vehicles.size(); i++) {
             Vehicle vehicle = vehicles.get(i);
-            if (vehicle.getColor().toLowerCase().equals(colour.toLowerCase())){
-                System.out.print(vehicle.getInSlot());
+            if (Objects.equals(with, "color")){
+                if (vehicle.getColor().equalsIgnoreCase(filter)){
+                    result += vehicle.getInSlot() + ",";
+                }
+            }else {
+                if (vehicle.getNumberPlate().equalsIgnoreCase(filter)){
+                    System.out.print(vehicle.getInSlot());
+                }
             }
         }
-    }
-
-    public void slotNumbersForVehiclesWithNumber(String numberPlate){
-        for (int i = 0; i < vehicles.size(); i++) {
-            Vehicle vehicle = vehicles.get(i);
-            if (vehicle.getNumberPlate().equalsIgnoreCase(numberPlate)){
-                System.out.print(vehicle.getInSlot());
-            }
+        if (Objects.equals(with, "color")) {
+            result = result.substring(0, result.length() - 1);
+            System.out.print(result);
         }
+        System.out.println();
     }
-
 }

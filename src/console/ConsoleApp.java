@@ -72,14 +72,14 @@ public class ConsoleApp {
                     break;
                 case "slot_numbers_for_vehicles_with_colour":
                     try{
-                        parkingService.slotNumbersForVehiclesWithColour(command[1]);
+                        parkingService.slotNumbersForVehicles(command[1], "color");
                     }catch (Exception e){
                         System.out.println("Tolong lengkapi perintah anda, silahkan coba lagi");
                     }
                     break;
                 case "slot_number_for_registration_number":
                     try{
-                        parkingService.slotNumbersForVehiclesWithNumber(command[1]);
+                        parkingService.slotNumbersForVehicles(command[1], "number_palte");
                     }catch (Exception e){
                         System.out.println("Tolong lengkapi perintah anda, silahkan coba lagi");
                     }
