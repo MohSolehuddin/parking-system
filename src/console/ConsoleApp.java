@@ -51,35 +51,35 @@ public class ConsoleApp {
                     break;
                 case "registration_numbers_for_vehicles_with_ood_plate":
                     try{
-                        parkingService.setParkingSlot(command[1]);
+                        parkingService.registrationNumbersForVehiclesWithOODPlate();
                     }catch (Exception e){
                         System.out.println("Tolong lengkapi perintah anda, silahkan coba lagi");
                     }
                     break;
                 case "registration_numbers_for_vehicles_with_event_plate":
                     try{
-                        parkingService.setParkingSlot(command[1]);
+                        parkingService.registrationNumbersForVehiclesWithEventPlate();
                     }catch (Exception e){
                         System.out.println("Tolong lengkapi perintah anda, silahkan coba lagi");
                     }
                     break;
                 case "registration_numbers_for_vehicles_with_color":
                     try{
-                        parkingService.setParkingSlot(command[1]);
+                        parkingService.registrationNumbersForVehiclesWithColour(command[1]);
                     }catch (Exception e){
                         System.out.println("Tolong lengkapi perintah anda, silahkan coba lagi");
                     }
                     break;
                 case "slot_numbers_for_vehicles_with_colour":
                     try{
-                        parkingService.setParkingSlot(command[1]);
+                        parkingService.slotNumbersForVehiclesWithColour(command[1]);
                     }catch (Exception e){
                         System.out.println("Tolong lengkapi perintah anda, silahkan coba lagi");
                     }
                     break;
                 case "slot_number_for_registration_number":
                     try{
-                        parkingService.setParkingSlot(command[1]);
+                        parkingService.slotNumbersForVehiclesWithNumber(command[1]);
                     }catch (Exception e){
                         System.out.println("Tolong lengkapi perintah anda, silahkan coba lagi");
                     }
