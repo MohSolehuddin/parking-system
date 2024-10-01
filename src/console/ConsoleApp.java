@@ -30,21 +30,21 @@ public class ConsoleApp {
                     break;
                 case "leave":
                     try{
-                        parkingService.setParkingSlot(command[1]);
+                        parkingService.leavePark(command[1]);
                     }catch (Exception e){
                         System.out.println("Tolong lengkapi perintah anda, silahkan coba lagi");
                     }
                     break;
                 case "status":
                     try{
-                        parkingService.setParkingSlot(command[1]);
+                        parkingService.status();
                     }catch (Exception e){
                         System.out.println("Tolong lengkapi perintah anda, silahkan coba lagi");
                     }
                     break;
                 case "type_of_vehicles":
                     try{
-                        parkingService.setParkingSlot(command[1]);
+                        parkingService.typeOfVehicle(command[1]);
                     }catch (Exception e){
                         System.out.println("Tolong lengkapi perintah anda, silahkan coba lagi");
                     }
